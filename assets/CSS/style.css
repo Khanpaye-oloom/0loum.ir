@@ -48,4 +48,12 @@ img { max-width: 100%; height: auto; }
 .site-sidebar a { text-decoration: none; color: var(--text-dark); }
 
 @media (min-width: 992px) { .main-nav, .header-actions { display: block; } .hamburger-menu { display: none; } }
+.form-control.error { border-color: #ef4444 !important; box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1); }
+.form-error { color: #ef4444; font-size: 0.875rem; margin-top: 4px; display: block; }
+.form-message { padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-weight: 500; animation: slideDown 0.3s ease; }
+.form-message.form-success { background: #ecfdf5; color: #065f46; border-right: 4px solid #10b981; }
+.form-message.form-error { background: #fef2f2; color: #7f1d1d; border-right: 4px solid #ef4444; }
+form button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 

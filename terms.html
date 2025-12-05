@@ -315,29 +315,7 @@
 </head>
 
 <body>
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
-        <div class="mark">ع</div><span class="brand-title">خانه‌پایه می‌آموزد</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">خانه</a><a href="courses.html">دوره‌ها</a><a href="contact.html">تماس با ما</a>
-      </nav>
-      <div class="header-actions"><a href="login.html" class="btn btn-primary">ورود دانش‌آموزان</a></div>
-      <button class="hamburger-menu" id="hamburgerBtn">☰</button>
-    </div>
-  </header>
-  <div class="mobile-nav-container" id="mobileNavContainer">
-    <div class="mobile-nav-backdrop"></div>
-    <nav class="mobile-nav">
-      <div class="mobile-nav-header"><span class="brand-title">منو</span><button class="close-btn"
-          id="closeBtn">&times;</button></div>
-      <a href="index.html">خانه</a><a href="courses.html">دوره‌ها</a><a href="contact.html">تماس با ما</a>
-      <a href="login.html"
-        style="margin-top: 24px; background: var(--primary); color: #fff; text-align:center; border-radius: 12px; padding: 12px;">ورود
-        دانش‌آموزان</a>
-    </nav>
-  </div>
+  <div data-include="/components/header.html"></div>
   <main>
     <div class="page-header">
       <div class="wrap">
@@ -365,22 +343,8 @@
       </div>
     </div>
   </main>
-  <footer class="site-footer">
-    <div class="footer-content">
-      <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
-        <div class="mark">ع</div><span class="brand-title">خانه‌پایه می‌آموزد</span>
-      </a>
-      <p>ما به آموزش باکیفیت و در دسترس برای همه دانش‌آموزان ایرانی باور داریم.</p>
-      <div class="footer-links">
-        <a href="terms.html">قوانین و مقررات</a><a href="faq.html">سوالات متداول</a><a href="contact.html">تماس با
-          ما</a>
-      </div>
-      <div class="copyright">© <span id="copy-year"></span> خانه‌پایه می‌آموزد. تمامی حقوق محفوظ است.</div>
-    </div>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () { document.getElementById('copy-year').textContent = new Date().getFullYear(); const t = document.getElementById('hamburgerBtn'), e = document.getElementById('mobileNavContainer'), o = document.getElementById('closeBtn'), n = document.querySelector('.mobile-nav-backdrop'); const c = () => { e.classList.add('open'), e.setAttribute('aria-hidden', 'false'), document.body.classList.add('menu-open') }, d = () => { e.classList.remove('open'), e.setAttribute('aria-hidden', 'true'), document.body.classList.remove('menu-open') }; t.addEventListener('click', c), o.addEventListener('click', d), n.addEventListener('click', d), document.addEventListener('keydown', t => { 'Escape' === t.key && e.classList.contains('open') && d() }) });
-  </script>
+  <div data-include="/components/footer.html"></div>
+  <script src="/assets/JS/main.js"></script>
 </body>
 
 </html>
